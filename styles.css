@@ -64,3 +64,37 @@ body { isolation: isolate; }
   .page-art { display: none; }
   .section-tint, #publications { background: white; }
 }
+
+/* A brief overview, with the full approved detail available on request. */
+.hero-bottom{grid-template-columns:1fr auto}
+.hero-bottom .scroll-cue{justify-self:end}
+.read-more{margin-top:20px;border-top:1px solid var(--line)}
+.read-more>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:48px;padding:12px 0;list-style:none;cursor:pointer;color:var(--mint);font-size:.82rem;font-weight:550;line-height:1.5;letter-spacing:0}
+.read-more>summary::-webkit-details-marker{display:none}
+.read-more>summary:hover{color:#e0f3c6}
+.read-more>summary:focus-visible{outline:3px solid var(--amber);outline-offset:5px;border-radius:3px}
+.disclosure-icon{position:relative;width:16px;height:16px;flex:0 0 16px}
+.disclosure-icon::before,.disclosure-icon::after{content:"";position:absolute;top:7px;left:2px;width:12px;height:1px;background:currentColor}
+.disclosure-icon::after{transform:rotate(90deg)}
+.read-more[open]>summary .disclosure-icon::after{display:none}
+.disclosure-content{padding:8px 0 15px}
+.about-disclosure .disclosure-content p{color:var(--muted);font-size:1rem;line-height:1.85}
+.project-disclosure .project-summary{margin-top:0;color:var(--muted);font-size:.93rem}
+.project-disclosure .project-detail{border-top:0;padding-top:0;margin-top:24px}
+.skill-group .skill-preview{color:#d0d8ce;line-height:1.7}
+.skill-group .familiarity{margin-top:17px;font-size:.8rem;line-height:1.6}
+.skill-group .familiarity strong{font-size:.62rem}
+.skill-disclosure{margin-top:17px}
+.skill-disclosure .disclosure-content{padding-top:5px}
+.career-preview{display:grid;grid-template-columns:230px 1fr;gap:45px}
+.career-preview h3{font-size:1.35rem;line-height:1.4}
+.career-preview .institution{margin-top:8px}
+.career-disclosure{margin-top:30px}
+.career-disclosure>.disclosure-content{padding-top:30px}
+.citation-disclosure{margin-top:16px;border-top:0}
+.citation-disclosure>summary{justify-content:flex-start;gap:15px;width:fit-content}
+.citation-disclosure .authors{margin-top:0}
+@media(max-width:1120px){.hero-bottom{grid-template-columns:1fr}}
+@media(max-width:840px){.career-preview{grid-template-columns:165px 1fr;gap:30px}}
+@media(max-width:600px){.career-preview{grid-template-columns:1fr;gap:10px}.read-more>summary{min-height:48px}.hero-bottom{justify-items:center}}
+@media print{.read-more>summary,.skill-group .skill-preview,.disclosure-content,.about-disclosure .disclosure-content p{color:black}.read-more{border-color:#777}.disclosure-icon{display:none}}
