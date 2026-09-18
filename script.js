@@ -61,7 +61,6 @@ applyMotionPreference();
   const context = canvas.getContext('2d');
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('#main-navigation');
-  const band = document.querySelector('.word-band');
   let frame = 0;
   let lastDraw = 0;
   let width = 0;
@@ -200,8 +199,6 @@ applyMotionPreference();
   window.addEventListener('scroll', () => {
     if (!motionAllowed()) return;
     targetPhase = .6 + window.scrollY * .00025;
-    const box = band.getBoundingClientRect();
-    if (box.bottom >= 0 && box.top <= innerHeight) band.style.setProperty('--word-shift', `${-70 + (innerHeight / 2 - box.top) * .1}px`);
     requestArtwork();
   }, {passive: true});
   window.addEventListener('resize', resizeArtwork, {passive: true});
