@@ -98,3 +98,12 @@ body { isolation: isolate; }
 @media(max-width:840px){.career-preview{grid-template-columns:165px 1fr;gap:30px}}
 @media(max-width:600px){.career-preview{grid-template-columns:1fr;gap:10px}.read-more>summary{min-height:48px}.hero-bottom{justify-items:center}}
 @media print{.read-more>summary,.skill-group .skill-preview,.disclosure-content,.about-disclosure .disclosure-content p{color:black}.read-more{border-color:#777}.disclosure-icon{display:none}}
+
+/* A collapsed privacy control keeps the initial footer concise. */
+.analytics-privacy{margin:0 0 28px;max-width:760px}
+.analytics-privacy>summary{font-size:.75rem;min-height:44px}
+.analytics-privacy .disclosure-content{font-size:.85rem;line-height:1.8;color:var(--muted)}
+#analytics-controls{margin-top:18px}
+#analytics-status{color:var(--ink)}
+#analytics-toggle{margin-top:12px;min-height:44px;padding:9px 16px;border:1px solid #657d66;border-radius:24px;background:transparent;color:var(--mint);font-size:.8rem}
+#analytics-toggle:hover{background:#26342a}
