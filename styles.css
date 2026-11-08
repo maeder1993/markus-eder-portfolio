@@ -141,3 +141,19 @@ body { isolation: isolate; }
 @media(max-width:840px){.lab-idea-copy{order:0}.lab-idea-disclosure{order:1}.lab-idea-art{order:2}.lab-idea-panels{grid-template-columns:1fr 1fr}.lab-idea-panel:last-child{grid-column:1 / -1}.lab-idea-flow ol{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.lab-idea-panels{grid-template-columns:1fr;gap:25px}.lab-idea-panel:last-child{grid-column:auto}.lab-idea-flow ol{grid-template-columns:1fr 1fr}}
 @media print{.lab-idea-panel p,.lab-idea-panel ul,.lab-idea-flow li{color:black}.lab-idea-flow li{border-color:#777}}
+
+/* A separate, proposed project-setup process within the lab AI concept. */
+.lab-setup{margin-top:42px;padding:clamp(22px,3vw,36px);border:1px solid #53695d;border-radius:16px;background:linear-gradient(135deg,rgba(62,88,73,.32),rgba(35,49,53,.55))}
+.lab-setup-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px 32px;align-items:end}
+.lab-idea-disclosure .lab-setup-kicker{color:var(--mint);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+.lab-idea-disclosure .lab-setup h3{color:var(--ink);font-size:clamp(1.35rem,2vw,1.8rem);line-height:1.22;letter-spacing:0;text-transform:none;margin:0}
+.lab-setup-steps{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:26px 0 0;padding:0}
+.lab-setup-steps li{min-width:0;padding:16px 13px;border:1px solid #566b5f;border-radius:12px;background:rgba(16,25,24,.3)}
+.lab-setup-steps li span{display:block;color:var(--coral);font-size:.68rem;letter-spacing:.08em;margin-bottom:12px}
+.lab-setup-steps li strong{display:block;color:var(--ink);font-size:.95rem;line-height:1.3}
+.lab-idea-disclosure .lab-setup-steps li p{color:#d0d8ce;font-size:.8rem;line-height:1.5;margin-top:8px}
+.lab-setup-steps .lab-setup-approval{border-color:#a8c99a;background:rgba(100,136,93,.17)}
+.lab-idea-disclosure .lab-setup-note{font-size:.84rem;margin-top:20px;color:#c3d4c9}
+@media(max-width:1020px){.lab-setup-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.lab-setup-heading{grid-template-columns:1fr;gap:14px}.lab-setup-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-setup-steps li:last-child{grid-column:1 / -1}}
+@media print{.lab-setup{background:white;border-color:#777}.lab-idea-disclosure .lab-setup h3,.lab-idea-disclosure .lab-setup-kicker,.lab-idea-disclosure .lab-setup-note,.lab-setup-steps li strong,.lab-idea-disclosure .lab-setup-steps li p{color:black}.lab-setup-steps li{background:white;border-color:#777}}
