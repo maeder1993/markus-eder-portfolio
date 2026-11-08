@@ -157,3 +157,7 @@ body { isolation: isolate; }
 @media(max-width:1020px){.lab-setup-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.lab-setup-heading{grid-template-columns:1fr;gap:14px}.lab-setup-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-setup-steps li:last-child{grid-column:1 / -1}}
 @media print{.lab-setup{background:white;border-color:#777}.lab-idea-disclosure .lab-setup h3,.lab-idea-disclosure .lab-setup-kicker,.lab-idea-disclosure .lab-setup-note,.lab-setup-steps li strong,.lab-idea-disclosure .lab-setup-steps li p{color:black}.lab-setup-steps li{background:white;border-color:#777}}
+
+/* Keep the longer setup descriptions readable on small screens. */
+.lab-idea-disclosure .lab-setup-steps li p{font-size:.88rem;line-height:1.6}
+@media(max-width:600px){.lab-setup-steps{grid-template-columns:1fr}.lab-setup-steps li:last-child{grid-column:auto}}
